@@ -13,9 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		610F06584A69D067057094D4 /* Pods_Transbank_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68EB81A75F8B0BE8E0CAF2DA /* Pods_Transbank_Tests.framework */; };
 		8ED6223824A78D5A002D51F1 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ED6223724A78D5A002D51F1 /* Configurations.plist */; };
-		BE00DFC88CAE2564AA9473E4 /* Pods_Transbank_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F346866B685AC986DC9346 /* Pods_Transbank_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +27,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19F346866B685AC986DC9346 /* Pods_Transbank_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transbank_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		23382FF68899A7B002AFCAD6 /* Pods-Transbank_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transbank_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Transbank_Tests/Pods-Transbank_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4179EC840F9B2CAD6AF9F04F /* Pods-Transbank_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transbank_Tests.release.xcconfig"; path = "Target Support Files/Pods-Transbank_Tests/Pods-Transbank_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5EA39D00ED8E02EB72CDB557 /* Pods-Transbank_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transbank_Example.debug.xcconfig"; path = "Target Support Files/Pods-Transbank_Example/Pods-Transbank_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Transbank_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transbank_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,10 +38,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6216F4A1680BD1CF2D39A689 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		68EB81A75F8B0BE8E0CAF2DA /* Pods_Transbank_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transbank_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80E02EA156A6E0E9BDF1E3B8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		8ED6223724A78D5A002D51F1 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
-		B38BEE4AA3BFAEBF34333F8A /* Pods-Transbank_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transbank_Example.release.xcconfig"; path = "Target Support Files/Pods-Transbank_Example/Pods-Transbank_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CE3D0A8B50EF38EA7B70FB4D /* Transbank.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Transbank.podspec; path = ../Transbank.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE00DFC88CAE2564AA9473E4 /* Pods_Transbank_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				610F06584A69D067057094D4 /* Pods_Transbank_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +69,6 @@
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				CF3DAFC953A94B363E214868 /* Pods */,
-				6AA1B54B024E2D50F623E06C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,22 +131,9 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		6AA1B54B024E2D50F623E06C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				19F346866B685AC986DC9346 /* Pods_Transbank_Example.framework */,
-				68EB81A75F8B0BE8E0CAF2DA /* Pods_Transbank_Tests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CF3DAFC953A94B363E214868 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5EA39D00ED8E02EB72CDB557 /* Pods-Transbank_Example.debug.xcconfig */,
-				B38BEE4AA3BFAEBF34333F8A /* Pods-Transbank_Example.release.xcconfig */,
-				23382FF68899A7B002AFCAD6 /* Pods-Transbank_Tests.debug.xcconfig */,
-				4179EC840F9B2CAD6AF9F04F /* Pods-Transbank_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -169,11 +145,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Transbank_Example" */;
 			buildPhases = (
-				C1D5288E9931F244B081B590 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				21F0F7E0B870ABB300029C28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,7 +162,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Transbank_Tests" */;
 			buildPhases = (
-				B0E9374F312035AA960C0AF6 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -264,87 +237,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		21F0F7E0B870ABB300029C28 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Transbank_Example/Pods-Transbank_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityLogger/AlamofireNetworkActivityLogger.framework",
-				"${BUILT_PRODUCTS_DIR}/BasicCommons/BasicCommons.framework",
-				"${BUILT_PRODUCTS_DIR}/BasicUIElements/BasicUIElements.framework",
-				"${BUILT_PRODUCTS_DIR}/OHHTTPStubs/OHHTTPStubs.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
-				"${BUILT_PRODUCTS_DIR}/Transbank/Transbank.framework",
-				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityLogger.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BasicCommons.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BasicUIElements.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OHHTTPStubs.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Transbank.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Transbank_Example/Pods-Transbank_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B0E9374F312035AA960C0AF6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Transbank_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C1D5288E9931F244B081B590 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Transbank_Example-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		607FACCC1AFB9204008FA782 /* Sources */ = {
@@ -495,7 +387,6 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EA39D00ED8E02EB72CDB557 /* Pods-Transbank_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Transbank/Info.plist;
@@ -510,7 +401,6 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B38BEE4AA3BFAEBF34333F8A /* Pods-Transbank_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Transbank/Info.plist;
@@ -525,7 +415,6 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23382FF68899A7B002AFCAD6 /* Pods-Transbank_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -547,7 +436,6 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4179EC840F9B2CAD6AF9F04F /* Pods-Transbank_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
