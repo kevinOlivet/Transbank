@@ -1,0 +1,112 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
+install! "cocoapods", :deterministic_uuids => false
+
+# Title generated from here: http://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=LIBRARY_NAME
+
+###
+### --- CONFIG ---
+# ████████╗██████╗  █████╗ ███╗   ██╗███████╗██████╗  █████╗ ███╗   ██╗██╗  ██╗
+# ╚══██╔══╝██╔══██╗██╔══██╗████╗  ██║██╔════╝██╔══██╗██╔══██╗████╗  ██║██║ ██╔╝
+#    ██║   ██████╔╝███████║██╔██╗ ██║███████╗██████╔╝███████║██╔██╗ ██║█████╔╝ 
+#    ██║   ██╔══██╗██╔══██║██║╚██╗██║╚════██║██╔══██╗██╔══██║██║╚██╗██║██╔═██╗ 
+#    ██║   ██║  ██║██║  ██║██║ ╚████║███████║██████╔╝██║  ██║██║ ╚████║██║  ██╗
+#    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝
+###
+
+#Use this variable to change pod install from local_pods, develop_pods, master_pods, feature_pods
+pods_environment = "local" # <- HERE: Change this line, options are: 'local', develop', 'master' or 'feature'
+
+###
+### --- METHODS ---
+###
+
+#Use this funcion to compile PRIVATE pods as development in local
+def local_pods
+  color(32) { puts "Installing Local Pods..." }
+  pod 'BasicCommons', :path => '../../BasicCommons/'
+  pod 'BasicUIElements', :path => '../../BasicUIElements/'
+end
+
+#Use this funcion to compile feature pods as development in featue
+def feature_pods
+    ### ONLY FOR DEVELOP PURPOSES ###
+    feature_branch = "develop" # <- HERE: Change this line to setup ALL the pods repository from another branch WHEN pods_environment = "develop"
+    ### ONLY FOR DEVELOP PURPOSES ###
+
+    color(32) { puts "Installing Develop Pods from branch: #{feature_branch}" }
+    pod 'BasicCommons', :git => 'git@github.com:kevinOlivet/BasicCommons.git', :branch => "#{feature_branch}"
+    pod 'BasicUIElements', :git => 'git@github.com:kevinOlivet/BasicUIElements.git', :branch => "#{feature_branch}"
+end
+
+#Use this funcion to compile develop pods as development in develop
+def develop_pods
+    color(32) { puts "Installing Develop Pods..." }
+    pod 'BasicCommons', :git => 'git@github.com:kevinOlivet/BasicCommons.git', :branch => 'develop'
+    pod 'BasicUIElements', :git => 'git@github.com:kevinOlivet/BasicUIElements.git', :branch => 'develop'
+end
+
+#Use this funcion to compile master pods as development in master
+def master_pods
+    color(32) { puts "Installing Develop Pods..." }
+    pod 'BasicCommons', :git => 'git@github.com:kevinOlivet/BasicCommons.git', :branch => 'master'
+    pod 'BasicUIElements', :git => 'git@github.com:kevinOlivet/BasicUIElements.git', :branch => 'master'
+end
+
+###
+### --- Utils ---
+###
+
+
+###
+#Load commons methods.
+require './configurations/Commons.rb'
+#Load podfile extensions, for post-pre instalations, etc.
+require './configurations/Extensions.rb'
+
+
+color(32) {
+    puts "--------------------------------------------------------------------------------"
+    puts ""
+	puts "████████╗██████╗  █████╗ ███╗   ██╗███████╗██████╗  █████╗ ███╗   ██╗██╗  ██╗"
+	puts "╚══██╔══╝██╔══██╗██╔══██╗████╗  ██║██╔════╝██╔══██╗██╔══██╗████╗  ██║██║ ██╔╝"
+	puts "   ██║   ██████╔╝███████║██╔██╗ ██║███████╗██████╔╝███████║██╔██╗ ██║█████╔╝ "
+	puts "   ██║   ██╔══██╗██╔══██║██║╚██╗██║╚════██║██╔══██╗██╔══██║██║╚██╗██║██╔═██╗ "
+	puts "   ██║   ██║  ██║██║  ██║██║ ╚████║███████║██████╔╝██║  ██║██║ ╚████║██║  ██╗"
+	puts "   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝"
+    puts ""
+    puts "--------------------------------------------------------------------------------"
+    puts " Executing Pod Install For Transbank_Example"
+    puts "--------------------------------------------------------------------------------"
+}
+
+###
+### --- PROCESSING ---
+###
+
+
+target 'Transbank_Example' do
+  color(32) { puts "\nFetching Modules Pods..." }
+  use_frameworks!
+  pod 'Transbank', :path => '../'
+
+#Main Pods
+pod_selector(pods_environment)
+
+  target 'Transbank_Tests' do
+    inherit! :search_paths
+  end
+end
+
+# #Needed to enable testability for the custom build scheme
+# post_install do |installer|
+#     installer.pods_project.targets.each do |target|
+#         target.build_configurations.each do |config|
+#             if config.name == 'DEV-Debug'|| config.name == 'QA-Debug'
+#                 config.build_settings['ENABLE_TESTABILITY'] = 'YES'
+#             end
+#         end
+#     end
+# end
+
+use_modular_headers!
