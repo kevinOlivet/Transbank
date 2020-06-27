@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieSummaryCell" rowHeight="150" id="LSX-wZ-794" customClass="MovieSummaryCell" customModule="Transbank" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="439" height="150"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LSX-wZ-794" id="Ylv-gd-fAS">
+                <rect key="frame" x="0.0" y="0.0" width="439" height="150"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JlZ-Gr-oIn">
+                        <rect key="frame" x="20" y="20" width="399" height="21"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.title">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date title" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fln-mg-lTs">
+                        <rect key="frame" x="20" y="56" width="104.5" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.releaseDateTitle">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release date" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULf-ob-4Po">
+                        <rect key="frame" x="341" y="56" width="78" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.releaseDate">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9G-NS-85S">
+                        <rect key="frame" x="20" y="80" width="87.5" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.popularityTitle">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popularity" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjZ-dQ-uBB">
+                        <rect key="frame" x="358" y="80" width="61" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.popularity">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VoteAverage title" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY9-Jr-vPZ">
+                        <rect key="frame" x="20" y="104" width="103" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.voteAveragetitle">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VoteAverage" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKa-vz-Idk">
+                        <rect key="frame" x="342.5" y="104" width="76.5" height="16"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MovieSummaryCell.voteAverage">
+                            <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                        </accessibility>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="JlZ-Gr-oIn" firstAttribute="leading" secondItem="Ylv-gd-fAS" secondAttribute="leading" constant="20" id="3xB-25-pn4"/>
+                    <constraint firstItem="eY9-Jr-vPZ" firstAttribute="leading" secondItem="Ylv-gd-fAS" secondAttribute="leadingMargin" id="648-Vd-G4x"/>
+                    <constraint firstItem="bKa-vz-Idk" firstAttribute="centerY" secondItem="eY9-Jr-vPZ" secondAttribute="centerY" id="JLy-WL-g6H"/>
+                    <constraint firstItem="ULf-ob-4Po" firstAttribute="centerY" secondItem="fln-mg-lTs" secondAttribute="centerY" id="Px6-41-TW4"/>
+                    <constraint firstItem="JlZ-Gr-oIn" firstAttribute="top" secondItem="Ylv-gd-fAS" secondAttribute="top" constant="20" id="Qae-BY-Wmz"/>
+                    <constraint firstItem="ULf-ob-4Po" firstAttribute="trailing" secondItem="Ylv-gd-fAS" secondAttribute="trailingMargin" id="Sd8-At-jFO"/>
+                    <constraint firstAttribute="trailing" secondItem="JlZ-Gr-oIn" secondAttribute="trailing" constant="20" id="YC7-0T-IaT"/>
+                    <constraint firstItem="FjZ-dQ-uBB" firstAttribute="trailing" secondItem="Ylv-gd-fAS" secondAttribute="trailingMargin" id="aWW-9o-vXS"/>
+                    <constraint firstItem="FjZ-dQ-uBB" firstAttribute="centerY" secondItem="f9G-NS-85S" secondAttribute="centerY" id="dhp-a8-JaJ"/>
+                    <constraint firstItem="f9G-NS-85S" firstAttribute="leading" secondItem="Ylv-gd-fAS" secondAttribute="leadingMargin" id="fTD-gY-5nq"/>
+                    <constraint firstItem="fln-mg-lTs" firstAttribute="leading" secondItem="Ylv-gd-fAS" secondAttribute="leading" constant="20" id="h3f-ib-9gI"/>
+                    <constraint firstItem="f9G-NS-85S" firstAttribute="top" secondItem="fln-mg-lTs" secondAttribute="bottom" constant="8" id="lAd-5b-Q0b"/>
+                    <constraint firstItem="eY9-Jr-vPZ" firstAttribute="top" secondItem="f9G-NS-85S" secondAttribute="bottom" constant="8" id="mgV-YN-Zg0"/>
+                    <constraint firstItem="fln-mg-lTs" firstAttribute="top" secondItem="JlZ-Gr-oIn" secondAttribute="bottom" constant="15" id="suK-Sk-auA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="bKa-vz-Idk" secondAttribute="trailing" id="zE2-Ja-L3u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="popularityLabel" destination="FjZ-dQ-uBB" id="B90-CF-2du"/>
+                <outlet property="popularityTitleLabel" destination="f9G-NS-85S" id="ceP-62-eVf"/>
+                <outlet property="releaseDateLabel" destination="ULf-ob-4Po" id="ct4-1z-myR"/>
+                <outlet property="releaseDateTitleLabel" destination="fln-mg-lTs" id="qiO-uV-Rgl"/>
+                <outlet property="titleLabel" destination="JlZ-Gr-oIn" id="D3V-o3-rLC"/>
+                <outlet property="voteAverageLabel" destination="bKa-vz-Idk" id="iDx-rN-8Ai"/>
+                <outlet property="voteAverageTitleLabel" destination="eY9-Jr-vPZ" id="tKz-Y3-Qy0"/>
+            </connections>
+            <point key="canvasLocation" x="78.985507246376812" y="103.125"/>
+        </tableViewCell>
+    </objects>
+</document>

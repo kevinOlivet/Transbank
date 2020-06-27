@@ -11,3 +11,9 @@
 // MARK: - Landing
 WELCOME_TITLE = "Welcome to the Transbank Landing page";
 WELCOME_SUBTITLE = "Please tap anywhere to begin";
+
+// Movie selection page
+SELECT_MOVIE = "Select a movie";
+RELEASE_DATE = "Release date";
+POPULARITY = "Popularity";
+VOTE_AVERAGE = "Vote average";

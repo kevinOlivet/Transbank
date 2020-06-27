@@ -28,8 +28,8 @@ public class TransbankStubs: NSObject {
         // MARK: - Transbank
         registerStub(
             for: Configuration.Api.movieSummary,
-            jsonFile: "GET_cuotas_200.json",
-            stubName: "Cuotas"
+            jsonFile: "GET_movie_summary_200.json",
+            stubName: "MovieSummary"
         )
     }
 

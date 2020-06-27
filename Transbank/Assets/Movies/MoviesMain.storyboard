@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0zI-rH-Dxm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="UuO-Il-Yjp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0zI-rH-Dxm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yOX-L6-lEd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wRK-BT-Odt" kind="relationship" relationship="rootViewController" id="4IR-Xt-3T7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05u-xX-FlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1282" y="113"/>
+        </scene>
+        <!--Movie Summary View Controller-->
+        <scene sceneID="aJC-Ep-abc">
+            <objects>
+                <viewController storyboardIdentifier="MovieSummaryViewController" id="wRK-BT-Odt" customClass="MovieSummaryViewController" customModule="Transbank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qfr-oa-E1s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qem-b1-37w">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="wRK-BT-Odt" id="WOo-pL-lay"/>
+                                    <outlet property="delegate" destination="wRK-BT-Odt" id="9Xm-kL-aHn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qem-b1-37w" firstAttribute="leading" secondItem="qkF-Oh-qZt" secondAttribute="leading" id="DlY-KW-w3Q"/>
+                            <constraint firstItem="Qem-b1-37w" firstAttribute="trailing" secondItem="qkF-Oh-qZt" secondAttribute="trailing" id="HgH-aE-G1H"/>
+                            <constraint firstItem="Qem-b1-37w" firstAttribute="bottom" secondItem="qfr-oa-E1s" secondAttribute="bottom" id="gOh-fJ-hgJ"/>
+                            <constraint firstItem="Qem-b1-37w" firstAttribute="top" secondItem="qkF-Oh-qZt" secondAttribute="top" id="zHg-ef-OS0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qkF-Oh-qZt"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oPS-3d-aWL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="vbf-t7-1DS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="Qem-b1-37w" id="l6D-Zp-Wfj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBc-FN-Srw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2058" y="113"/>
+        </scene>
+    </scenes>
+</document>

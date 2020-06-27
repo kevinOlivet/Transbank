@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>App</key>
-	<dict>
-		<key>stubs</key>
-		<dict>
-			<key>main-dev</key>
-			<true/>
-			<key>main-loc</key>
-			<false/>
-			<key>main-int</key>
-			<false/>
-			<key>main-qa</key>
-			<false/>
-			<key>main-prod</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>Api</key>
 	<dict>
 		<key>scheme</key>

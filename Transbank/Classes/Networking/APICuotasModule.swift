@@ -11,20 +11,20 @@ import BasicCommons
 
 protocol APITransbankProtocol {
 
-    func getMovieSummary(success: @escaping (_ result: [MovieSummaryModel], Int) -> Void,
+    func getMovieSummary(success: @escaping (_ result: MovieSummaryResult, Int) -> Void,
                          failure: @escaping (_ error: NTError, Int) -> Void)
 }
 
 class APITransbank: AuthenticatedAPI, APITransbankProtocol {
 
     // MARK: - Movie Summary
-    func getMovieSummary(success: @escaping (_ result: [MovieSummaryModel], Int) -> Void,
+    func getMovieSummary(success: @escaping (_ result: MovieSummaryResult, Int) -> Void,
                          failure: @escaping (_ error: NTError, Int) -> Void) {
 
         let url = Configuration.Api.movieSummary
 
         self.requestGeneric(
-            type: [MovieSummaryModel].self,
+            type: MovieSummaryResult.self,
             url: url,
             method: HTTPMethod.get,
             parameters: nil,
@@ -36,5 +36,10 @@ class APITransbank: AuthenticatedAPI, APITransbankProtocol {
                 failure(error, statusCode)
             }
         )
+    }
+
+    class func formatGetDetailResource(_ resource: String, _ path: String) -> String {
+        let instancedResource = resource.replacingOccurrences(of: "{movie_id}", with: path)
+        return instancedResource
     }
 }

@@ -23,14 +23,13 @@ class TransbankLandingRouter: NSObject, TransbankLandingRoutingLogic, TransbankL
     // MARK: Routing
 
     func routeToTransbank() {
-        print("Here routeToTransbank")
-//        let storyboard = UIStoryboard(
-//            name: "CuotasMain",
-//            bundle: Utils.bundle(forClass: EnterAmountCleanViewController.classForCoder())
-//        )
-//        let destinationNVC = storyboard.instantiateInitialViewController() as! UINavigationController
-//        destinationNVC.modalPresentationStyle = .fullScreen
-//        navigateToTransbank(source: viewController!, destination: destinationNVC)
+        let storyboard = UIStoryboard(
+            name: "MoviesMain",
+            bundle: Utils.bundle(forClass: MovieSummaryViewController.classForCoder())
+        )
+        let destinationNVC = storyboard.instantiateInitialViewController() as! UINavigationController
+        destinationNVC.modalPresentationStyle = .fullScreen
+        navigateToTransbank(source: viewController!, destination: destinationNVC)
     }
 
     // MARK: Navigation
