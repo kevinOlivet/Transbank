@@ -2,30 +2,28 @@
 //  TransbankLandingInteractor.swift
 //  Pods
 //
-//  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
+//  Copyright © 2018 Kevin Olivet. All rights reserved.
 //
 
 import Foundation
 
 protocol TransbankLandingBusinessLogic {
-//    func doSomething(request: TransbankLanding.Something.Request)
+    func setupUI(request: TransbankLanding.Basic.Request)
 }
 
-protocol TransbankLandingDataStore {
-    //var name: String { get set }
-}
+protocol TransbankLandingDataStore {}
 
 class TransbankLandingInteractor: TransbankLandingBusinessLogic, TransbankLandingDataStore {
     var presenter: TransbankLandingPresentationLogic?
     var worker: TransbankLandingWorker = TransbankLandingWorker()
-    // var name: String = ""
-
+    
     // MARK: Methods
 
-//     func doSomething(request: TransbankLanding.Something.Request) {
-//        worker.doSomeWork()
-//
-//        let response = TransbankLanding.Something.Response()
-//        presenter?.presentSomething(response: response)
-//    }
+    func setupUI(request: TransbankLanding.Basic.Request) {
+        let response = TransbankLanding.Basic.Response(
+            title: "WELCOME_TITLE",
+            subtitle: "WELCOME_SUBTITLE"
+        )
+        presenter?.presentSetupUI(response: response)
+    }
 }

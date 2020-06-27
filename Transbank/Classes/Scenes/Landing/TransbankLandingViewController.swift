@@ -2,30 +2,36 @@
 //  TransbankLandingViewController.swift
 //  Pods
 //
-//  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
+//  Copyright © 2018 Kevin Olivet. All rights reserved.
 //
 
-import UIKit
+import BasicCommons
+import BasicUIElements
+import Lottie
 
 protocol TransbankLandingDisplayLogic: AnyObject {
-    //     func displaySomething(viewModel: TransbankLanding.Something.ViewModel)
+    func displaySetupUI(viewModel: TransbankLanding.Basic.ViewModel)
 }
 
 class TransbankLandingViewController: UIViewController, TransbankLandingDisplayLogic {
     var interactor: TransbankLandingBusinessLogic?
     var router: (NSObjectProtocol & TransbankLandingRoutingLogic & TransbankLandingDataPassing)?
 
-    //@IBOutlet weak var nameTextField: UITextField!
+    var animation: MainAnimationView?
+
+    @IBOutlet private weak var welcomeView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
 
     // MARK: Object lifecycle
-
-    override  init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         setup()
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    init() {
+        let bundleToUse = Utils.bundle(forClass: TransbankLandingViewController.classForCoder())
+        super.init(nibName: "TransbankLandingViewController", bundle: bundleToUse)
         setup()
     }
 
@@ -44,32 +50,35 @@ class TransbankLandingViewController: UIViewController, TransbankLandingDisplayL
         router.dataStore = interactor
     }
 
-    // MARK: Routing
-
-    override  func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
-            }
-        }
-    }
-
     // MARK: View lifecycle
-
     override  func viewDidLoad() {
         super.viewDidLoad()
-//        doSomething()
+        interactor?.setupUI(request: TransbankLanding.Basic.Request())
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        animation?.play()
     }
 
     // MARK: Methods
+    func displaySetupUI(viewModel: TransbankLanding.Basic.ViewModel) {
+        view.addTapAction(target: self, action: #selector(goToTransbank))
+        titleLabel.text = viewModel.title
+        subtitleLabel.text = viewModel.subtitle
+        animation = WelcomeAnimation(
+            width: welcomeView.frame.size.width,
+            height: welcomeView.frame.size.height
+        )
+        welcomeView.addSubview(animation!)
+    }
 
-//     func doSomething() {
-//        let request = TransbankLanding.Something.Request()
-//        interactor?.doSomething(request: request)
-//    }
+    @objc
+    func goToTransbank() {
+        router?.routeToTransbank()
+    }
 
-//     func displaySomething(viewModel: TransbankLanding.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
-//    }
+    // Getters
+    var titleLabelText: String? { titleLabel.text }
+    var subtitleLabelText: String? { subtitleLabel.text }
 }

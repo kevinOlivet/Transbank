@@ -13,6 +13,14 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		8EA36DD524A79DBB00A2BA37 /* TransbankLandingRoutingLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DCD24A79DBB00A2BA37 /* TransbankLandingRoutingLogicSpy.swift */; };
+		8EA36DD624A79DBB00A2BA37 /* TransbankLandingDisplayLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DCE24A79DBB00A2BA37 /* TransbankLandingDisplayLogicSpy.swift */; };
+		8EA36DD724A79DBB00A2BA37 /* TransbankLandingBusinessLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DCF24A79DBB00A2BA37 /* TransbankLandingBusinessLogicSpy.swift */; };
+		8EA36DD824A79DBB00A2BA37 /* TransbankLandingInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DD024A79DBB00A2BA37 /* TransbankLandingInteractorTests.swift */; };
+		8EA36DD924A79DBB00A2BA37 /* TransbankLandingWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DD124A79DBB00A2BA37 /* TransbankLandingWorkerTests.swift */; };
+		8EA36DDA24A79DBB00A2BA37 /* TransbankLandingViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DD224A79DBB00A2BA37 /* TransbankLandingViewControllerTests.swift */; };
+		8EA36DDB24A79DBB00A2BA37 /* TransbankLandingPresentationLogicSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DD324A79DBB00A2BA37 /* TransbankLandingPresentationLogicSpy.swift */; };
+		8EA36DDC24A79DBB00A2BA37 /* TransbankLandingPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA36DD424A79DBB00A2BA37 /* TransbankLandingPresenterTests.swift */; };
 		8ED6223824A78D5A002D51F1 /* Configurations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ED6223724A78D5A002D51F1 /* Configurations.plist */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +47,14 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6216F4A1680BD1CF2D39A689 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		80E02EA156A6E0E9BDF1E3B8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		8EA36DCD24A79DBB00A2BA37 /* TransbankLandingRoutingLogicSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransbankLandingRoutingLogicSpy.swift; path = ../TransbankLandingRoutingLogicSpy.swift; sourceTree = "<group>"; };
+		8EA36DCE24A79DBB00A2BA37 /* TransbankLandingDisplayLogicSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransbankLandingDisplayLogicSpy.swift; path = ../TransbankLandingDisplayLogicSpy.swift; sourceTree = "<group>"; };
+		8EA36DCF24A79DBB00A2BA37 /* TransbankLandingBusinessLogicSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransbankLandingBusinessLogicSpy.swift; path = ../TransbankLandingBusinessLogicSpy.swift; sourceTree = "<group>"; };
+		8EA36DD024A79DBB00A2BA37 /* TransbankLandingInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransbankLandingInteractorTests.swift; sourceTree = "<group>"; };
+		8EA36DD124A79DBB00A2BA37 /* TransbankLandingWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransbankLandingWorkerTests.swift; sourceTree = "<group>"; };
+		8EA36DD224A79DBB00A2BA37 /* TransbankLandingViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransbankLandingViewControllerTests.swift; sourceTree = "<group>"; };
+		8EA36DD324A79DBB00A2BA37 /* TransbankLandingPresentationLogicSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransbankLandingPresentationLogicSpy.swift; path = ../TransbankLandingPresentationLogicSpy.swift; sourceTree = "<group>"; };
+		8EA36DD424A79DBB00A2BA37 /* TransbankLandingPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransbankLandingPresenterTests.swift; sourceTree = "<group>"; };
 		8ED6223724A78D5A002D51F1 /* Configurations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configurations.plist; sourceTree = "<group>"; };
 		CE3D0A8B50EF38EA7B70FB4D /* Transbank.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Transbank.podspec; path = ../Transbank.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				8EA36DCC24A79DBB00A2BA37 /* TransbankLanding */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -129,6 +146,29 @@
 				6216F4A1680BD1CF2D39A689 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		8EA36DCC24A79DBB00A2BA37 /* TransbankLanding */ = {
+			isa = PBXGroup;
+			children = (
+				8EA36DDD24A79DD400A2BA37 /* Spies */,
+				8EA36DD024A79DBB00A2BA37 /* TransbankLandingInteractorTests.swift */,
+				8EA36DD124A79DBB00A2BA37 /* TransbankLandingWorkerTests.swift */,
+				8EA36DD224A79DBB00A2BA37 /* TransbankLandingViewControllerTests.swift */,
+				8EA36DD424A79DBB00A2BA37 /* TransbankLandingPresenterTests.swift */,
+			);
+			path = TransbankLanding;
+			sourceTree = "<group>";
+		};
+		8EA36DDD24A79DD400A2BA37 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				8EA36DCD24A79DBB00A2BA37 /* TransbankLandingRoutingLogicSpy.swift */,
+				8EA36DCE24A79DBB00A2BA37 /* TransbankLandingDisplayLogicSpy.swift */,
+				8EA36DCF24A79DBB00A2BA37 /* TransbankLandingBusinessLogicSpy.swift */,
+				8EA36DD324A79DBB00A2BA37 /* TransbankLandingPresentationLogicSpy.swift */,
+			);
+			path = Spies;
 			sourceTree = "<group>";
 		};
 		CF3DAFC953A94B363E214868 /* Pods */ = {
@@ -252,7 +292,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA36DD724A79DBB00A2BA37 /* TransbankLandingBusinessLogicSpy.swift in Sources */,
+				8EA36DDC24A79DBB00A2BA37 /* TransbankLandingPresenterTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				8EA36DD924A79DBB00A2BA37 /* TransbankLandingWorkerTests.swift in Sources */,
+				8EA36DD624A79DBB00A2BA37 /* TransbankLandingDisplayLogicSpy.swift in Sources */,
+				8EA36DDB24A79DBB00A2BA37 /* TransbankLandingPresentationLogicSpy.swift in Sources */,
+				8EA36DD824A79DBB00A2BA37 /* TransbankLandingInteractorTests.swift in Sources */,
+				8EA36DD524A79DBB00A2BA37 /* TransbankLandingRoutingLogicSpy.swift in Sources */,
+				8EA36DDA24A79DBB00A2BA37 /* TransbankLandingViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

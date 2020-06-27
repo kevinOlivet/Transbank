@@ -2,28 +2,20 @@
 //  TransbankLandingModels.swift
 //  Pods
 //
-//  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
+//  Copyright © 2018 Kevin Olivet. All rights reserved.
 //
 
-// swiftlint:disable nesting
 enum TransbankLanding {
 
-    enum Something {
-        struct Request {
+    enum Basic {
+        struct Request { }
+        struct Response {
+            let title: String
+            let subtitle: String
         }
-        enum Response {
-            struct Success {
-            }
-            struct Failure {
-            }
-        }
-        enum ViewModel {
-            struct Success {
-            }
-            struct Failure {
-            }
+        struct ViewModel {
+            let title: String
+            let subtitle: String
         }
     }
 }
-
-// swiftlint:enable nesting
