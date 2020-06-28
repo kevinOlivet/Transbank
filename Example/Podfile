@@ -15,7 +15,7 @@ install! "cocoapods", :deterministic_uuids => false
 ###
 
 #Use this variable to change pod install from local_pods, develop_pods, master_pods, feature_pods
-pods_environment = "local" # <- HERE: Change this line, options are: 'local', develop', 'master' or 'feature'
+pods_environment = "feature" # <- HERE: Change this line, options are: 'local', develop', 'master' or 'feature'
 
 ###
 ### --- METHODS ---
@@ -31,7 +31,7 @@ end
 #Use this funcion to compile feature pods as development in featue
 def feature_pods
     ### ONLY FOR DEVELOP PURPOSES ###
-    feature_branch = "develop" # <- HERE: Change this line to setup ALL the pods repository from another branch WHEN pods_environment = "develop"
+    feature_branch = "feature-transbank" # <- HERE: Change this line to setup ALL the pods repository from another branch WHEN pods_environment = "develop"
     ### ONLY FOR DEVELOP PURPOSES ###
 
     color(32) { puts "Installing Develop Pods from branch: #{feature_branch}" }
