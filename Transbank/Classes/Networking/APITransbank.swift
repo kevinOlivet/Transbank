@@ -13,6 +13,10 @@ protocol APITransbankProtocol {
 
     func getMovieSummary(success: @escaping (_ result: MovieSummaryResult, Int) -> Void,
                          failure: @escaping (_ error: NTError, Int) -> Void)
+
+    func getMovieDetail(movieId: String,
+                        success: @escaping (_ result: MovieDetailResult, Int) -> Void,
+                        failure: @escaping (_ error: NTError, Int) -> Void)
 }
 
 class APITransbank: AuthenticatedAPI, APITransbankProtocol {
@@ -38,8 +42,32 @@ class APITransbank: AuthenticatedAPI, APITransbankProtocol {
         )
     }
 
-    class func formatGetDetailResource(_ resource: String, _ path: String) -> String {
-        let instancedResource = resource.replacingOccurrences(of: "{movie_id}", with: path)
+    // MARK: - Movie Detail
+    func getMovieDetail(
+        movieId: String,
+        success: @escaping (_ result: MovieDetailResult, Int) -> Void,
+        failure: @escaping (_ error: NTError, Int) -> Void
+    ) {
+
+        let url = APITransbank.formatGetDetailResource(Configuration.Api.movieDetail, movieId)
+
+        self.requestGeneric(
+            type: MovieDetailResult.self,
+            url: url,
+            method: HTTPMethod.get,
+            parameters: nil,
+            encoding: JSONEncoding.default,
+            validStatusCodes: [Int](200..<300),
+            onSuccess: { movieSummaryModel, _, statusCode in
+                success(movieSummaryModel!, statusCode!)
+            }, onFailure: { error, statusCode in
+                failure(error, statusCode)
+            }
+        )
+    }
+
+    class func formatGetDetailResource(_ resource: String, _ movieId: String) -> String {
+        let instancedResource = resource.replacingOccurrences(of: "{movie_id}", with: movieId)
         return instancedResource
     }
 }

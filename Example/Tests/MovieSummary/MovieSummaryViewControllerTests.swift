@@ -119,7 +119,7 @@ class MovieSummaryViewControllerTests: XCTestCase {
         // Then
         XCTAssertTrue(sut.view.subviews.last is MainActivityIndicator)
     }
-    func testDisplayPaymentMethodArray() {
+    func testDisplayMovieArray() {
         // Given
         let item = MovieSummary.Success.ViewModel.SingleMovieViewModel(
             titleLabel: "titleLabelTest",

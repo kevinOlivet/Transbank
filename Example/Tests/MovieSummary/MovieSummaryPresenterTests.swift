@@ -38,7 +38,7 @@ class MovieSummaryPresenterTests: XCTestCase {
 
     // MARK: Tests
 
-func testPresentSetupUI() {
+    func testPresentSetupUI() {
         // Given
         let response = MovieSummary.Texts.Response(title: "testTitle")
         // When
@@ -117,7 +117,7 @@ func testPresentSetupUI() {
         )
         XCTAssertEqual(
             spyViewController.displayMovieArrayViewModel?.movieArray.first?.releaseDateTitleLabel,
-            "Release date",
+            "Release date:",
             "the data should be localized"
         )
         XCTAssertEqual(
@@ -127,7 +127,7 @@ func testPresentSetupUI() {
         )
         XCTAssertEqual(
             spyViewController.displayMovieArrayViewModel?.movieArray.first?.popularityTitleLabel,
-            "Popularity",
+            "Popularity:",
             "the data should be localized"
         )
         XCTAssertEqual(
@@ -137,7 +137,7 @@ func testPresentSetupUI() {
         )
         XCTAssertEqual(
             spyViewController.displayMovieArrayViewModel?.movieArray.first?.voteAverageTitleLabel,
-            "Vote average",
+            "Vote average:",
             "the data should be localized"
         )
         XCTAssertEqual(
@@ -158,10 +158,3 @@ func testPresentSetupUI() {
         )
     }
 }
-
-// swiftlint:enable line_length
-// swiftlint:enable implicitly_unwrapped_optional
-// swiftlint:enable identifier_name
-// swiftlint:enable force_cast
-// swiftlint:enable file_length
-// swiftlint:enable superfluous_disable_command

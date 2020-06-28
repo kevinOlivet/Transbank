@@ -5,7 +5,7 @@
 //  Copyright © 2018 Kevin Olivet. All rights reserved.
 //
 
-import UIKit
+import BasicCommons
 
 @objc
 protocol MovieSummaryRoutingLogic {
@@ -28,23 +28,24 @@ class MovieSummaryRouter: NSObject, MovieSummaryRoutingLogic, MovieSummaryDataPa
     }
 
     func routeToMovieDetail() {
-//        let storyboard = UIStoryboard(name: "MoviesMain", bundle: Utils.bundle(forClass: BankSelectCleanViewController.classForCoder()))
-//        let destinationVC = storyboard.instantiateViewController(withIdentifier: "BankSelectCleanViewController") as! BankSelectCleanViewController
-//        var destinationDS = destinationVC.router!.dataStore!
-//
-//        passDataToBankSelect(source: dataStore!, destination: &destinationDS)
-//        navigateToBankSelect(source: viewController!, destination: destinationVC)
+        let storyboard = UIStoryboard(name: "MoviesMain", bundle: Utils.bundle(forClass: MovieDetailViewController.classForCoder()))
+        let destinationVC = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as! MovieDetailViewController
+        var destinationDS = destinationVC.router!.dataStore!
+
+        passDataToBankSelect(source: dataStore!, destination: &destinationDS)
+        navigateToBankSelect(source: viewController!, destination: destinationVC)
     }
 
     // MARK: Navigation
 
-//    func navigateToBankSelect(source: MovieSummaryViewController, destination: BankSelectCleanViewController) {
-//        viewController?.navigationController?.show(destination, sender: nil)
-//    }
-//
-//    // MARK: Passing data
-//
-//    func passDataToBankSelect(source: MovieSummaryDataStore, destination: inout BankSelectCleanDataStore) {
-////        destination.amountEntered = source.amountEntered
-//    }
+    func navigateToBankSelect(source: MovieSummaryViewController, destination: MovieDetailViewController) {
+        viewController?.navigationController?.show(destination, sender: nil)
+    }
+
+    // MARK: Passing data
+
+    func passDataToBankSelect(source: MovieSummaryDataStore, destination: inout MovieDetailDataStore) {
+        destination.selectedMovieId = source.selectedMovieId
+        destination.selectedMovieName = source.selectedMovieName
+    }
 }

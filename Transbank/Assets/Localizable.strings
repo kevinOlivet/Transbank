@@ -14,6 +14,15 @@ WELCOME_SUBTITLE = "Please tap anywhere to begin";
 
 // Movie selection page
 SELECT_MOVIE = "Select a movie";
-RELEASE_DATE = "Release date";
-POPULARITY = "Popularity";
-VOTE_AVERAGE = "Vote average";
+RELEASE_DATE = "Release date:";
+POPULARITY = "Popularity:";
+VOTE_AVERAGE = "Vote average:";
+
+UNKNOWN_GENRE = "Unknown genre";
+UNKNOWN_COMPANY = "Unknown Production Company";
+
+BUDGET = "Budget: $";
+REVENUE = "Revenue: $";
+MINS = " minutes";
+
+MOV_DEETS = "Movie Detail";

@@ -17,7 +17,7 @@ protocol MovieSummaryDisplayLogic: AnyObject {
     func showSelectedMovie(viewModel: MovieSummary.MovieDetail.ViewModel)
 }
 
-class MovieSummaryViewController: BaseViewController, MovieSummaryDisplayLogic {
+public class MovieSummaryViewController: BaseViewController, MovieSummaryDisplayLogic {
     var interactor: MovieSummaryBusinessLogic?
     var router: (NSObjectProtocol & MovieSummaryRoutingLogic & MovieSummaryDataPassing)?
 
@@ -50,7 +50,7 @@ class MovieSummaryViewController: BaseViewController, MovieSummaryDisplayLogic {
 
     // MARK: View lifecycle
 
-    override  func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         interactor?.prepareSetUpUI(request: MovieSummary.Texts.Request())
@@ -116,11 +116,11 @@ extension MovieSummaryViewController: UITableViewDataSource, UITableViewDelegate
         tableView.reloadData()
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moviesToDisplay.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: type(of: self).cellIdentifier,
             for: indexPath
@@ -130,12 +130,12 @@ extension MovieSummaryViewController: UITableViewDataSource, UITableViewDelegate
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let request = MovieSummary.MovieDetail.Request(indexPath: indexPath.row)
         interactor?.handleDidSelectRow(request: request)
     }
 
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         MovieSummary.Cell.height.rawValue
     }
 

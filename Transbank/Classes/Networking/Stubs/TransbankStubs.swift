@@ -31,6 +31,13 @@ public class TransbankStubs: NSObject {
             jsonFile: "GET_movie_summary_200.json",
             stubName: "MovieSummary"
         )
+
+        // Use for Ad Astra at the top of the list
+        registerStub(
+            for: APITransbank.formatGetDetailResource(Configuration.Api.movieDetail, "419704"),
+            jsonFile: "GET_movie_detail_200.json",
+            stubName: "MovieDetail"
+        )
     }
 
     // MARK: - Logging

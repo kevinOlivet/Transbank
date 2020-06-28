@@ -14,6 +14,7 @@ protocol MovieSummaryBusinessLogic {
 }
 
 protocol MovieSummaryDataStore {
+    var selectedMovieName: String? { get set }
     var selectedMovieId: Int? { get set }
 }
 
@@ -22,6 +23,7 @@ class MovieSummaryInteractor: MovieSummaryBusinessLogic, MovieSummaryDataStore {
     var worker: MovieSummaryWorker = MovieSummaryWorker()
 
     var movieResult: MovieSummaryResult?
+    var selectedMovieName: String?
     var selectedMovieId: Int?
 
     // MARK: Methods
@@ -66,6 +68,7 @@ class MovieSummaryInteractor: MovieSummaryBusinessLogic, MovieSummaryDataStore {
 
     func handleDidSelectRow(request: MovieSummary.MovieDetail.Request) {
         selectedMovieId = movieResult?.results[request.indexPath].id
+        selectedMovieName = movieResult?.results[request.indexPath].title
         presenter?.presentSelectedMovie(response: MovieSummary.MovieDetail.Response())
     }
 }

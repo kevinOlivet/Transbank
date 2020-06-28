@@ -21,7 +21,6 @@ class MovieSummaryPresenter: MovieSummaryPresentationLogic {
 
     // MARK: Methods
 
-    // MARK: Methods
     func presentSetupUI(response: MovieSummary.Texts.Response) {
         let viewModel = MovieSummary.Texts.ViewModel(title: response.title.localized)
         viewController?.displaySetupUI(viewModel: viewModel)
