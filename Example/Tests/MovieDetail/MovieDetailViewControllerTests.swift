@@ -2,7 +2,7 @@
 //  MovieDetailViewControllerTests.swift
 //  Transbank
 //
-//  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
+//  Copyright © 2018 Kevin Olivet. All rights reserved.
 //
 
 import BasicCommons
