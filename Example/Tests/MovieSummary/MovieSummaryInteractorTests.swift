@@ -55,6 +55,7 @@ class MovieSummaryInteractorTests: XCTestCase {
         var getMovieListCalled = false
 
         override func getMovieList(
+            page: String,
             successCompletion: @escaping (MovieSummaryResult?) -> Void,
             failureCompletion: @escaping (NTError) -> Void
         ) {
@@ -69,7 +70,7 @@ class MovieSummaryInteractorTests: XCTestCase {
                     overview: "testOverview",
                     releaseDate: "testReleaseDate"
                 )
-                let model = MovieSummaryResult(results: [item])
+                let model = MovieSummaryResult(page: 1, totalPages: 2, results: [item])
                 successCompletion(model)
             case .parsingFail:
                 successCompletion(nil)
@@ -194,8 +195,7 @@ class MovieSummaryInteractorTests: XCTestCase {
             overview: "testOverview",
             releaseDate: "testReleaseDate"
         )
-        let model = MovieSummaryResult(results: [item])
-        sut.movieResult = model
+        sut.movieResult = [item]
         let request = MovieSummary.MovieDetail.Request(indexPath: 0)
         // When
         sut.handleDidSelectRow(request: request)

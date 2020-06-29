@@ -57,7 +57,7 @@
 			<string>/movie</string>
 		</dict>
 		<key>API_MOVIE_SUMMARY</key>
-		<string>/popular?api_key=80b8ffced8460c2a858657eca9041d7f&amp;language=en-US&amp;page=1</string>
+		<string>/popular?api_key=80b8ffced8460c2a858657eca9041d7f&amp;language=en-US&amp;page=</string>
 		<key>API_MOVIE_DETAIL</key>
 		<string>/{movie_id}?api_key=80b8ffced8460c2a858657eca9041d7f&amp;language=en-US</string>
 	</dict>

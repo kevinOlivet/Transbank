@@ -51,7 +51,7 @@ class MovieSummaryWorkerTests: XCTestCase {
 
         let expectation = self.expectation(description: "calls the callback with a resource object")
         // When
-        sut.getMovieList(successCompletion: { receivedMovies in
+        sut.getMovieList(page: "1", successCompletion: { receivedMovies in
             // Then
             XCTAssertEqual(
                 receivedMovies?.results.first?.title,
@@ -98,7 +98,7 @@ class MovieSummaryWorkerTests: XCTestCase {
         let expectation = self.expectation(description: "network down")
 
         // When
-        sut.getMovieList(successCompletion: { _ in
+        sut.getMovieList(page: "1", successCompletion: { _ in
         }) { error in
             // Then
             XCTAssertNotNil(
@@ -121,7 +121,7 @@ class MovieSummaryWorkerTests: XCTestCase {
         let expectation = self.expectation(description: "network is down!")
 
         // When
-        sut.getMovieList(successCompletion: { _ in
+        sut.getMovieList(page: "1", successCompletion: { _ in
         }) { error in
             switch error {
             case NTError.noInternetConection:

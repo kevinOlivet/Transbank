@@ -88,7 +88,7 @@ public class MovieSummaryViewController: BaseViewController, MovieSummaryDisplay
     }
 
     func displayMovieArray(viewModel: MovieSummary.Success.ViewModel) {
-        moviesToDisplay = viewModel.movieArray
+        moviesToDisplay.append(contentsOf: viewModel.movieArray)
         tableView.reloadData()
     }
 
@@ -137,6 +137,11 @@ extension MovieSummaryViewController: UITableViewDataSource, UITableViewDelegate
 
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         MovieSummary.Cell.height.rawValue
+    }
+
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard indexPath.row == moviesToDisplay.count - 5 else { return }
+        fetchMovieList()
     }
 
     // MARK: - GettersSetters

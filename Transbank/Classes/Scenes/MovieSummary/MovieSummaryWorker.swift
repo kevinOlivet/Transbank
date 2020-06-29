@@ -13,6 +13,7 @@ class MovieSummaryWorker {
     var repo: APITransbankProtocol = APITransbank()
 
     func getMovieList(
+        page: String,
         successCompletion: @escaping (MovieSummaryResult?) -> Void,
         failureCompletion: @escaping (NTError) -> Void
     ) {
@@ -21,6 +22,7 @@ class MovieSummaryWorker {
             return
         }
         repo.getMovieSummary(
+            page: page,
             success: { receivedMovies, _ in
                 successCompletion(receivedMovies)
             }) { error, _ in

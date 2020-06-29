@@ -8,9 +8,12 @@
 import Foundation
 
 struct MovieSummaryResult: Codable {
+    let page, totalPages: Int
     let results: [Result]
 
     enum CodingKeys: String, CodingKey {
+        case page
+        case totalPages = "total_pages"
         case results
     }
 
