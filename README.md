@@ -1,7 +1,10 @@
 # Transbank
 
 This module is found here: https://github.com/kevinOlivet/Transbank/tree/feature-transbank
+
 It's a test module for Transbank consuming IMBD
+
+Simply switch to branch "feature-transbank" and run pod install.
 
 ## Example
 
