@@ -28,8 +28,33 @@ public class TransbankStubs: NSObject {
         // MARK: - Transbank
         registerStub(
             for: Configuration.Api.movieSummary,
-            jsonFile: "GET_cuotas_200.json",
-            stubName: "Cuotas"
+            jsonFile: "GET_movie_summary_200.json",
+            stubName: "MovieSummary"
+        )
+
+        // Use for Ad Astra at the top of the list
+        registerStub(
+            for: APITransbank.formatGetDetailResource(Configuration.Api.movieDetail, "419704"),
+            jsonFile: "GET_movie_detail_200.json",
+            stubName: "MovieDetailAstra"
+        )
+        // for Artemis Fowl
+        registerStub(
+            for: APITransbank.formatGetDetailResource(Configuration.Api.movieDetail, "475430"),
+            jsonFile: "GET_movie_detail_200.json",
+            stubName: "MovieDetailArtemis"
+        )
+        // for Lost Bullet
+        registerStub(
+            for: APITransbank.formatGetDetailResource(Configuration.Api.movieDetail, "706503"),
+            jsonFile: "GET_movie_detail_200.json",
+            stubName: "MovieDetailBullet"
+        )
+        // for Sonic the Hedgehog
+        registerStub(
+            for: APITransbank.formatGetDetailResource(Configuration.Api.movieDetail, "454626"),
+            jsonFile: "GET_movie_detail_200.json",
+            stubName: "MovieDetailSonic"
         )
     }
 

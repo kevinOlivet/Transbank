@@ -2,13 +2,13 @@
 //  TransbankLandingPresenter.swift
 //  Pods
 //
-//  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
+//  Copyright Kevin Olivet. All rights reserved.
 //
 
 import UIKit
 
 protocol TransbankLandingPresentationLogic {
-//    func presentSomething(response: TransbankLanding.Something.Response)
+    func presentSetupUI(response: TransbankLanding.Basic.Response)
 }
 
 class TransbankLandingPresenter: TransbankLandingPresentationLogic {
@@ -16,8 +16,11 @@ class TransbankLandingPresenter: TransbankLandingPresentationLogic {
 
     // MARK: Methods
 
-//     func presentSomething(response: TransbankLanding.Something.Response) {
-//        let viewModel = TransbankLanding.Something.ViewModel()
-//        viewController?.displaySomething(viewModel: viewModel)
-//    }
+    func presentSetupUI(response: TransbankLanding.Basic.Response) {
+        let viewModel = TransbankLanding.Basic.ViewModel(
+            title: response.title.localized,
+            subtitle: response.subtitle.localized
+        )
+        viewController?.displaySetupUI(viewModel: viewModel)
+    }
 }

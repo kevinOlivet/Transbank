@@ -13,7 +13,7 @@ Used to inject the Transbank scene
   s.source           = { :git => 'ssh://git@github.com/kevinOlivet/Transbank.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '11.0'
-  s.swift_version = '5.0'
+  s.swift_version = '5.1'
 
   s.source_files = 'Transbank/Classes/**/*'
   s.resources = [
