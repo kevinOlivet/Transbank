@@ -64,4 +64,13 @@ extension Configuration.Api {
         )
         return url
     }
+
+    static var movieDetail: String {
+        let url = msUrl + Configuration.configurationForKeyAndSubKey(
+            key: "Api",
+            subKey: "API_MOVIE_DETAIL",
+            baseConfigurationDictionary: baseConfigurationDictionary
+        )
+        return url
+    }
 }

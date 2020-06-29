@@ -2,22 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>App</key>
-	<dict>
-		<key>stubs</key>
-		<dict>
-			<key>main-dev</key>
-			<true/>
-			<key>main-loc</key>
-			<false/>
-			<key>main-int</key>
-			<false/>
-			<key>main-qa</key>
-			<false/>
-			<key>main-prod</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>Api</key>
 	<dict>
 		<key>scheme</key>
@@ -73,7 +57,7 @@
 			<string>/movie</string>
 		</dict>
 		<key>API_MOVIE_SUMMARY</key>
-		<string>/popular?api_key=80b8ffced8460c2a858657eca9041d7f&amp;language=en-US&amp;page=1</string>
+		<string>/popular?api_key=80b8ffced8460c2a858657eca9041d7f&amp;language=en-US&amp;page=</string>
 		<key>API_MOVIE_DETAIL</key>
 		<string>/{movie_id}?api_key=80b8ffced8460c2a858657eca9041d7f&amp;language=en-US</string>
 	</dict>

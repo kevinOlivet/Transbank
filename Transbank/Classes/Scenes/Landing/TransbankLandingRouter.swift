@@ -2,14 +2,14 @@
 //  TransbankLandingRouter.swift
 //  Pods
 //
-//  Copyright © 2018 Banco de Crédito e Inversiones. All rights reserved.
+//  Copyright © Kevin Olivet. All rights reserved.
 //
 
-import UIKit
+import BasicCommons
 
 @objc
 protocol TransbankLandingRoutingLogic {
-    // func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToTransbank()
 }
 
 protocol TransbankLandingDataPassing {
@@ -22,29 +22,18 @@ class TransbankLandingRouter: NSObject, TransbankLandingRoutingLogic, TransbankL
 
     // MARK: Routing
 
-    // func routeToSomewhere(segue: UIStoryboardSegue?) {
-    //  if let segue = segue {
-    //    let destinationVC = segue.destination as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //  } else {
-    //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-    //    var destinationDS = destinationVC.router!.dataStore!
-    //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-    //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-    //  }
-    //}
+    func routeToTransbank() {
+        let storyboard = UIStoryboard(
+            name: "MoviesMain",
+            bundle: Utils.bundle(forClass: MovieSummaryViewController.classForCoder())
+        )
+        let destinationNVC = storyboard.instantiateInitialViewController() as! UINavigationController
+        destinationNVC.modalPresentationStyle = .fullScreen
+        navigateToTransbank(source: viewController!, destination: destinationNVC)
+    }
 
     // MARK: Navigation
-
-    // func navigateToSomewhere(source: TransbankLandingViewController, destination: SomewhereViewController) {
-    //  source.show(destination, sender: nil)
-    //}
-
-    // MARK: Passing data
-
-    // func passDataToSomewhere(source: TransbankLandingDataStore, destination: inout SomewhereDataStore) {
-    //  destination.name = source.name
-    //}
+    func navigateToTransbank(source: TransbankLandingViewController, destination: UINavigationController) {
+        source.present(destination, animated: true, completion: nil)
+    }
 }
